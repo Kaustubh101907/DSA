@@ -8,6 +8,7 @@ public class ResetIthBit {
     }
 
     private static int resetIthBit(int n, int i) {
-        return n & (1 << (i - 1));
+        int comp = (1 << (i-1));
+        return n ^ comp;
     }
 }
