@@ -2,7 +2,7 @@ package BitwiseOperators;
 
 public class PowerOfTwo {
     public static void main(String[] args) {
-        int n = 8;
+        int n = 16;
         System.out.println(powerOfTwo(n));
     }
 
