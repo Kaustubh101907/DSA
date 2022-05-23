@@ -12,7 +12,9 @@ public class PowerOfN {
         int base = n;
         while (pow > 0) {
             int ld = pow & 1;
-            ans *= base;
+            if (ld == 1) {
+                ans *= base;
+            }
             base *= base;
             pow = pow >> 1;
         }
