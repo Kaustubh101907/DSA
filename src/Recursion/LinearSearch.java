@@ -1,5 +1,7 @@
 package Recursion;
 
+import java.util.*;
+
 public class LinearSearch {
     public static void main(String[] args) {
         int[] arr = {3,2,1,18,18,9};
@@ -8,6 +10,7 @@ public class LinearSearch {
         System.out.println(isPresent(arr, target, i));
         System.out.println(linearSearch(arr, target, i));
         linearSearchAllIndex(arr, target, i);
+//        ArrayList<Integer> al = linearSearchAllIndexArrayList(arr, target, i, new ArrayList<>());
     }
 
     private static void linearSearchAllIndex(int[] arr, int target, int i) {
@@ -36,4 +39,14 @@ public class LinearSearch {
         }
         return linearSearch(arr, target, i+1);
     }
+
+//    private static ArrayList linearSearchAllIndexArrayList(int[] arr, int target, int i, ArrayList<Integer> al) {
+//        if (i == arr.length) {
+//            return al;
+//        }
+//        if (arr[i] == target) {
+//            al.add(i);
+//        }
+//        return linearSearch(arr, target, i+1, );
+//    }
 }
