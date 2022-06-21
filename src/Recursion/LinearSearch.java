@@ -10,6 +10,9 @@ public class LinearSearch {
         System.out.println(isPresent(arr, target, i));
         System.out.println(linearSearch(arr, target, i));
         linearSearchAllIndex(arr, target, i);
+        System.out.println();
+        findAllIndex(arr, target, i);
+        System.out.println(list);
 //        ArrayList<Integer> al = linearSearchAllIndexArrayList(arr, target, i, new ArrayList<>());
     }
 
@@ -38,6 +41,17 @@ public class LinearSearch {
             return i;
         }
         return linearSearch(arr, target, i+1);
+    }
+
+    static ArrayList<Integer> list = new ArrayList<>();
+    static void findAllIndex(int[] arr, int target, int index) {
+        if (index == arr.length) {
+            return;
+        }
+        if (arr[index] == target) {
+            list.add(index);
+        }
+        findAllIndex(arr, target, index + 1);
     }
 
 //    private static ArrayList linearSearchAllIndexArrayList(int[] arr, int target, int i, ArrayList<Integer> al) {
