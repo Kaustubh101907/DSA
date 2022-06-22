@@ -13,7 +13,7 @@ public class LinearSearch {
         System.out.println();
         findAllIndex(arr, target, i);
         System.out.println(list);
-//        ArrayList<Integer> al = linearSearchAllIndexArrayList(arr, target, i, new ArrayList<>());
+        ArrayList<Integer> al = linearSearchAllIndexArrayList(arr, target, i, new ArrayList<>());
     }
 
     private static void linearSearchAllIndex(int[] arr, int target, int i) {
@@ -54,13 +54,13 @@ public class LinearSearch {
         findAllIndex(arr, target, index + 1);
     }
 
-//    private static ArrayList linearSearchAllIndexArrayList(int[] arr, int target, int i, ArrayList<Integer> al) {
-//        if (i == arr.length) {
-//            return al;
-//        }
-//        if (arr[i] == target) {
-//            al.add(i);
-//        }
-//        return linearSearch(arr, target, i+1, );
-//    }
+    private static ArrayList linearSearchAllIndexArrayList(int[] arr, int target, int i, ArrayList<Integer> al) {
+        if (i == arr.length) {
+            return al;
+        }
+        if (arr[i] == target) {
+            al.add(i);
+        }
+        return linearSearch(arr, target, i+1, al);
+    }
 }
