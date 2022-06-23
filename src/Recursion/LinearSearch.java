@@ -17,6 +17,7 @@ public class LinearSearch {
         ArrayList<Integer> ans = findAllIndex(arr, 4, 0, list);
         System.out.println(ans);
         System.out.println(list);
+        System.out.println(findAllIndex2(arr, 4, 0));
     }
 
     private static void linearSearchAllIndex(int[] arr, int target, int i) {
@@ -65,5 +66,19 @@ public class LinearSearch {
             list.add(index);
         }
         return findAllIndex(arr, target, index + 1, list);
+    }
+
+    private static ArrayList<Integer> findAllIndex2(int[] arr, int target, int index) {
+        ArrayList<Integer> list = new ArrayList<>();
+        if (index == arr.length) {
+            return list;
+        }
+        // this will contain ans for that fun call only
+        if (arr[index] == target) {
+            list.add(index);
+        }
+        ArrayList<Integer> ansFromBelowCalls = findAllIndex2(arr, target, index + 1);
+        list.addAll(ansFromBelowCalls);
+        return list;
     }
 }
