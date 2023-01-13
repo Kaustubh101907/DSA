@@ -11,6 +11,6 @@ public class PrintNto1 {
             return;
         }
         System.out.print(n + " ");
-        printNto1(n - 1);
+        printNto1(n - 1); //tail recursion
     }
 }
